@@ -200,12 +200,12 @@ bigGrayButton.addEventListener("click", book);
 
 
 // When the user clicks anywhere outside of the modals, close it
-    window.onclick = function(event) {
-        if (event.target == modal || event.target == modalThanks) {
-        modal.style.display = "none";
-        modalThanks.style.display = "none";
-        }
-    }
+    // window.onclick = function(event) {
+    //     if (event.target == modal || event.target == modalThanks) {
+    //     modal.style.display = "none";
+    //     modalThanks.style.display = "none";
+    //     }
+    // }
 
 btnContinue[0].addEventListener("click", showThanks);
 btnContinue[1].addEventListener("click", showThanks);
@@ -355,13 +355,17 @@ function showBurgerMenu() {
     }
 }        
 
-// When the user clicks anywhere outside of the burger menu, close it
-window.onclick = function(event) {
 
-    if (event.target == burgerMenu) {
-    burgerMenu.style.display = "none";
-    hamburger.src = "images/icon-hamburger.svg";
+// When the user clicks anywhere outside of the modals or burger menu, close it
+window.onclick = function(event) {
+    if (event.target == modal || event.target == modalThanks) {
+    modal.style.display = "none";
+    modalThanks.style.display = "none";
     }
+    if (event.target == burgerMenu) {
+        burgerMenu.style.display = "none";
+        hamburger.src = "images/icon-hamburger.svg";
+        }
 }
 
 hamburger.addEventListener("click", showBurgerMenu);
