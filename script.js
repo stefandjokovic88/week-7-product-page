@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const backThisProject = document.getElementById("back-this-project");
     const modal = document.getElementById("modal");
     const iconCloseModal = document.getElementById("icon-close-modal");
+    const iconCloseModalMobile = document.getElementById("icon-close-modal-mobile");
 
 // When the user clicks on Back this project button show the modal
     function showModal() {
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     backThisProject.addEventListener("click", showModal);
     iconCloseModal.addEventListener("click", closeModal);
-             
+    iconCloseModalMobile.addEventListener("click", closeModal); 
 
 // enter pledge
 
